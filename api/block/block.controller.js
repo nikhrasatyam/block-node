@@ -8,7 +8,7 @@ const list = async (req, res) => {
   try {
     const info = await rpc.get_info();
     const promises = [];
-    for (let i = info.head_block_num - 9; i <= info.head_block_num; i++) {
+    for (let i = info.head_block_num - 9; i <= info.head_block_num; i += 1) {
       promises.push(await rpc.get_block(i));
     }
     const result = await Promise.all(promises);
