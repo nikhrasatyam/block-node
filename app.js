@@ -2,7 +2,6 @@
 const express = require('express');
 const http = require('http');
 const morgan = require('morgan');
-const path = require('path');
 const config = require('./config.js');
 
 const app = express();
